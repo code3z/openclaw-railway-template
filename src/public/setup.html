@@ -331,7 +331,8 @@
           this.log += '✗ Error: ' + String(e) + '\n';
           this.devicesLoading = false;
         }
-      }
+      },
+
     }));
   });
   </script>
@@ -442,6 +443,19 @@
                 Exporting...
               </span>
             </button>
+          </div>
+
+          <div class="action-card action-blue">
+            <div class="action-card-header">
+              <div class="action-icon">
+                <svg class="icon-md" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              </div>
+              <span class="action-title">View Logs</span>
+            </div>
+            <p class="action-desc">Stream server logs in real-time for debugging and monitoring.</p>
+            <a href="/logs" target="_blank" class="action-btn" style="display:block;text-align:center;text-decoration:none">
+              View Logs
+            </a>
           </div>
         </div>
 
@@ -736,6 +750,7 @@
         </div>
       </div>
     </div>
+
   </div>
 </body>
 </html>

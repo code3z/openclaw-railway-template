@@ -395,6 +395,9 @@ img { max-width: 100%; height: auto; }
 
 .action-btn {
   width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-top: 1rem;
   padding: 0.625rem 1rem;
   border-radius: 0.5rem;
@@ -537,7 +540,7 @@ img { max-width: 100%; height: auto; }
   padding: 1rem;
   font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
   font-size: 0.75rem;
-  color: var(--text-faint);
+  color: var(--text-mid);
   white-space: pre-wrap;
   max-height: 16rem;
   overflow-y: auto;
@@ -919,7 +922,7 @@ img { max-width: 100%; height: auto; }
 }
 
 .spinner {
-  border: 2px solid transparent;
+  border: 2px solid var(--border);
   border-radius: 50%;
   animation: spin 0.8s linear infinite;
 }
@@ -932,9 +935,8 @@ img { max-width: 100%; height: auto; }
 .spinner-inline {
   width: 1rem;
   height: 1rem;
-  border-width: 2px;
-  border-color: currentColor;
-  border-top-color: transparent;
+  vertical-align: middle;
+  animation: spin 0.8s linear infinite;
 }
 
 .spinning { animation: spin 0.8s linear infinite; }
@@ -1065,6 +1067,69 @@ img { max-width: 100%; height: auto; }
   transition: background-color 0.15s;
 }
 .tui-reconnect-btn:hover { background: #b91c1c; }
+
+.log-autoscroll-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  cursor: pointer;
+}
+
+.log-autoscroll-toggle input {
+  accent-color: #dc2626;
+}
+
+.logs-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logs-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.logs-toolbar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logs-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logs-page-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.logs-status-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.logs-page-viewer {
+  flex: 1;
+  margin: 0;
+  padding: 1rem;
+  font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, monospace;
+  font-size: 0.75rem;
+  color: var(--text-mid);
+  background: var(--bg-muted);
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-y: auto;
+}
 
 #terminal-container {
   width: 100%;
