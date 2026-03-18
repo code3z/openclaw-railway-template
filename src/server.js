@@ -116,7 +116,7 @@ const INTERNAL_GATEWAY_HOST = process.env.INTERNAL_GATEWAY_HOST ?? "127.0.0.1";
 const GATEWAY_TARGET = `http://${INTERNAL_GATEWAY_HOST}:${INTERNAL_GATEWAY_PORT}`;
 
 const OPENCLAW_ENTRY =
-  process.env.OPENCLAW_ENTRY?.trim() || "/openclaw/dist/entry.js";
+  process.env.OPENCLAW_ENTRY?.trim() || "/usr/local/lib/node_modules/openclaw/dist/entry.js";
 const OPENCLAW_NODE = process.env.OPENCLAW_NODE?.trim() || "node";
 
 const ENABLE_WEB_TUI = process.env.ENABLE_WEB_TUI?.toLowerCase() === "true";

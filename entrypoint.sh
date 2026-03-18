@@ -11,4 +11,11 @@ fi
 rm -rf /home/linuxbrew/.linuxbrew
 ln -sfn /data/.linuxbrew /home/linuxbrew/.linuxbrew
 
+if [ ! -d /data/.openclaw-hub ]; then
+  cp -a /openclaw /data/.openclaw-hub
+fi
+
+rm -rf /openclaw
+ln -sfn /data/.openclaw-hub /openclaw
+
 exec gosu openclaw node src/server.js
